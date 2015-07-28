@@ -7,8 +7,4 @@ public final class PlayState extends State {
 	public PlayState() {
 		getEntities().add(human);
 	}
-	@Override
-	public void update() {
-		human.getEntityGraphics().getCurrentSprite().setX(human.getEntityGraphics().getCurrentSprite().getX() + 1);
-	}
 }

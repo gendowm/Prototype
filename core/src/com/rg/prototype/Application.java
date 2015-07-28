@@ -14,6 +14,7 @@ import com.rg.prototype.states.State;
 import java.util.ArrayList;
 
 public final class Application extends ApplicationAdapter {
+	public static final float SECONDS_PER_FRAME = 1/60f;
 	private SpriteBatch spriteBatch;
 	private final ArrayList<State> states = new ArrayList<State>();
 	private State currentState;
@@ -27,6 +28,7 @@ public final class Application extends ApplicationAdapter {
 	public void render() {
 		currentState.update();
 		updateGraphics();
+		System.out.println(Gdx.graphics.getFramesPerSecond());
 	}
 	private void updateGraphics() {
 		Gdx.gl.glClearColor(0, 0, 0, 1);

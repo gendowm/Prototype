@@ -8,4 +8,8 @@ public class Human extends Entity {
 	public Human() {
 		super(new EntityGraphics(new TextureRegion(new Texture(Gdx.files.internal("human.png")))));
 	}
+	@Override
+	public void update(float delta) {
+		getEntityGraphics().getCurrentSprite().setX(getEntityGraphics().getCurrentSprite().getX() + 2);
+	}
 }

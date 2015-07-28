@@ -5,6 +5,8 @@ public abstract class Entity {
 	public Entity(EntityGraphics entityGraphics) {
 		this.entityGraphics = entityGraphics;
 	}
+	public void update(float delta) {
+	}
 	public EntityGraphics getEntityGraphics() {
 		return entityGraphics;
 	}

@@ -12,6 +12,8 @@ public final class DesktopLauncher {
 		configuration.width = 960;
 		configuration.height = 600;
 		configuration.resizable = false;
+		configuration.foregroundFPS = (int) (1 / Application.SECONDS_PER_FRAME);
+		configuration.backgroundFPS = configuration.foregroundFPS;
 		new LwjglApplication(new Application(), configuration);
 	}
 }

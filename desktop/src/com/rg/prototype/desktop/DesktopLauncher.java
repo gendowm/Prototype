@@ -4,9 +4,14 @@ import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 import com.rg.prototype.Application;
 
-public class DesktopLauncher {
-	public static void main (String[] arg) {
-		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		new LwjglApplication(new Application(), config);
+public final class DesktopLauncher {
+	private DesktopLauncher() {
+	}
+	public static void main(String[] args) {
+		final LwjglApplicationConfiguration configuration = new LwjglApplicationConfiguration();
+		configuration.width = 960;
+		configuration.height = 600;
+		configuration.resizable = false;
+		new LwjglApplication(new Application(), configuration);
 	}
 }
